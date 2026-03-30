@@ -213,7 +213,6 @@ units:
 
 # Espèces culturales (agroedi - crops.csv)
 crop_species:
-  "0": espèce culturale inconnue
   E01: Abricotier
   E02: Achillée millefeuille
   E03: Agrostide blanche
@@ -500,15 +499,238 @@ crop_species:
   G86: Vulpin des prés
   G87: Vulpin genouille
   G88: Zinnia
+  G90: à couper
+  G91: à grappes
+  G92: à maquereaux
+  G93: à mirabelles
+  G94: à nectarines ou brugnons
+  G95: à pêches
+  G96: à reines-claudes, quetsches
+  G97: allongée
+  G98: Amsterdam
+  G99: batavia
+  H01: beef = charnue
+  H02: beurre pommée
+  H03: bigarreaux
+  H04: botte
+  H05: cerise / cocktail
+  H06: cerises anglaises
+  H07: commun
+  H08: Daïkon = blanc
+  H09: de Cayenne
+  H10: demi longue et longues de type jersey
+  H11: demi-long à bout blanc
+  H12: des teinturiers
+  H13: d'Espagne
+  H15: fdp x rgi
+  H16: fe x rgi
+  H17: gazon
+  H18: Globuleux vert
+  H19: grande
+  H20: grasse
+  H21: Grenadille
+  H22: griottes
+  H23: Grise
+  H24: grosse
+  H25: Guignes
+  H26: hybride
+  H27: inuline
+  H28: japonais
+  H29: jaune de Hollande
+  H30: le rond rouge
+  H31: nantaise
+  H32: pavies
+  H33: Petit violet
+  H34: Poirée = bettes
+  H35: Pomme à cidre
+  H36: pommes de table
+  H37: Porte-Greffe
+  H38: "pruneaux (prune d'ente)"
+  H39: romaine
+  H40: ronde à l'unité
+  H41: ronde en grappe
+  H43: sommites graines sèches
+  H44: types anciens
+  H46: à grosses racines
+  H47: citrouille pâtisson
+  H48: musquée - de Provence - Butternut
+  H49: saison
+  H50: remontant
+  H51: fraisier des bois
+  H52: Galia
+  H53: cantaloup ou charentais jaunissant à maturité
+  H54: cantaloup ou charentais non jaunissant à maturité
+  H55: brodé américain
+  H56: "d'hiver ou sans odeur (type Canari)"
+  H57: Fleur
+  H58: Aromatique
+  H59: Bois
+  H60: bourgeons
+  H61: Cuve
+  H62: feuilles et fruits
+  H63: Fruit
+  H64: racines fraîches
+  H65: racines séchées
+  H66: Table
   H67: Centaurée
   H68: Lotier
+  H69: Mélange
+  H70: enherbement non fourrager
+  H71: Oléifère
+  H72: Autre
+  I01: Arbousier commun
+  I02: Arbre à pain
+  I03: Aulne
+  I04: Bouleau
   I05: Canne à sucre
+  I06: Canne de provence ou roseaux à quenouilles
+  I07: Capucine tubéreuse
+  I08: Carambolier
+  I10: Cèdre
+  I11: Cerfeuil tubéreux
+  I12: Charme
+  I14: Chêne
+  I15: Chervis
+  I16: Cormier
+  I17: Douglas
+  I19: Erable
+  I20: Eucalyptus
+  I21: Flouve médicinale
+  I22: Frêne
+  I23: Gerbera
+  I24: Gesse Commune ou pois carré
+  I25: Gingembre
+  I26: Gombo
+  I27: Grenadier
+  I28: Guède ou pastel des teinturiers
+  I29: Hêtre
+  I30: King-grass
+  I31: Longanie
+  I32: Malanga ou chou caraïbe
+  I33: Manioc
+  I34: Mélèze
+  I35: Merisier
+  I36: Nyger
+  I37: Papayer
+  I38: Peuplier
+  I39: Pin
+  I40: Pitaya
+  I41: Pomme Liane ou Grenadille
+  I42: Ramboutan
+  I43: Robinier
+  I44: Sapin
+  I45: Sapotillier
+  I46: Saule
+  I47: Sequoia
+  I48: Yacón ou Poire de terre
+  I49: Buis
+  I50: Marronnier
+  I51: Laurier cerise
+  I52: Platane commun
+  I53: Palmier éventail de Californie
+  I54: Palmier bleu
+  I55: Palmier nain
+  I56: Palmier dattier
+  I57: Palmier de Chine
+  I58: Thuya
+  I59: Faux-Cyprès
+  I60: Cyprès commun
+  I61: Genévrier
+  I62: Epicéa
+  I63: Arbre de Judée
+  I64: Camélia
+  I65: Catalpa
+  I66: Chalef argenté
+  I67: Fuchsia
+  I68: Fusain
+  I69: Hibuscus althéa
+  I70: Laurier-rose
+  I71: Mahonia
+  I72: Mimosa
+  I73: "Pyracantha (buisson ardent)"
+  I74: Rhododendron
+  I75: Viorne
+  I76: Amandier de Chine
+  I77: Amandier nain de Chine
+  I78: Cerisier du Japon
+  I79: Cerisier à fleurs à port colonnaire
+  I80: Cerisier de Mandchourie
+  I81: Cerisier hybride à fleurs
+  I82: Cerisier à fleurs doubles
+  I83: Cerisier du Tibet
+  I84: Merisier à grappes blanches
+  I85: Merisier à grappes roses
+  I86: Prunier à fleurs
+  I87: Prunier d'ornement à feuillage pourpre
+  I88: Anthurium
+  I89: Amaryllis belladona
+  I90: Campanule
+  I91: Célosie
+  I92: Delphinium
+  I93: Giroflée ravenelle
+  I94: Hortensia
+  I95: Hibiscus sabdariffa
+  I96: Lisianthus
+  I97: Muflier
+  I98: Pivoine
+  I99: Rosier multiflore
   J01: Cultures fruitières
   J02: Cultures légumières
+  J03: Tulipe
+  J04: Cultures tropicales
+  J05: Divers
+  J06: CIPAN potentiel
+  J07: Cultures fourragères/Prairie/ Pelouse/ Gazon
+  J08: Sylviculture
+  J10: Grandes cultures
   J10ZAQZFA: blé dur de printemps
   J10ZAQZFB: blé dur d'hiver
   J10ZARZFA: blé tendre de printemps
   J10ZARZFB: blé tendre d'hiver
+  J11: PPAM
+  J12: Cultures dédiées à la production de biomasse
+  J13: Cornus
+  J14: Cotoneaster
+  J15: Euonymus
+  J17: Ilex
+  J18: Lagerstroemia
+  J19: Ligustrum
+  J20: Magnolia
+  J21: Osmanthus
+  J22: Photinia
+  J23: Pittosporum
+  J24: Santoline
+  J25: Spiraea
+  J26: Cupressocyparis
+  J27: Begonia
+  J28: Bidens
+  J29: Calibrachoa
+  J30: Coleus
+  J31: Coreopsis
+  J32: Cyclamen
+  J33: Diascia
+  J34: Dipladénia
+  J35: Gazania
+  J37: Impatiens
+  J38: Lantana
+  J40: Osteospermum
+  J41: Pelargonium
+  J42: Pelargonium grandiflorum
+  J43: Pelargonium hortorum
+  J44: Pelargonium peltatum
+  J45: Petunia
+  J46: Poinsettia
+  J47: Rudbeckia
+  J48: Viola
+  J49: Pâquerette
+  J50: Impatiens walleriana
+  J51: Impatiens Nouvelle Guinée
+  J52: Mélange Gazon
+  J53: Heuchère
+  J54: Tulipier de Virginie
+  J55: Magnolia grandiflora
+  J56: Magnolia soulangeana
+  J57: Quinoa
   ZA2: Betterave sucrière
   ZAF: Agrostide
   ZAG: Ail
@@ -647,228 +869,6 @@ crop_species:
   ZOH: Autres ornementales
   ZOI: Autre potagères
   ZOJ: Espèces diverses
-  G90: à couper
-  G91: à grappes
-  G92: à maquereaux
-  G93: à mirabelles
-  G94: à nectarines ou brugnons
-  G95: à pêches
-  G96: à reines-claudes, quetsches
-  G97: allongée
-  G98: Amsterdam
-  G99: batavia  H01: beef = charnue
-  H02: beurre pommée
-  H03: bigarreaux
-  H04: botte
-  H05: cerise / cocktail
-  H06: cerises anglaises
-  H07: commun
-  H08: Daïkon = blanc
-  H09: de Cayenne
-  H10: demi longue et longues de type jersey
-  H11: demi-long à bout blanc
-  H12: des teinturiers
-  H13: d'Espagne
-  H15: fdp x rgi
-  H16: fe x rgi
-  H17: gazon
-  H18: Globuleux vert
-  H19: grande
-  H20: grasse
-  H21: Grenadille
-  H22: griottes
-  H23: Grise
-  H24: grosse
-  H25: Guignes
-  H26: hybride
-  H27: inuline
-  H28: japonais
-  H29: jaune de Hollande
-  H30: le rond rouge
-  H31: nantaise
-  H32: pavies
-  H33: Petit violet
-  H34: Poirée = bettes
-  H35: Pomme à cidre
-  H36: pommes de table
-  H37: Porte-Greffe
-  H38: "pruneaux (prune d'ente)"
-  H39: romaine
-  H40: ronde à l'unité
-  H41: ronde en grappe
-  H43: sommites graines sèches
-  H44: types anciens
-  H46: à grosses racines
-  H47: citrouille pâtisson
-  H48: musquée - de Provence - Butternut
-  H49: saison
-  H50: remontant
-  H51: fraisier des bois
-  H52: Galia
-  H53: cantaloup ou charentais jaunissant à maturité
-  H54: cantaloup ou charentais non jaunissant à maturité
-  H55: brodé américain
-  H56: "d'hiver ou sans odeur (type Canari)"
-  H57: Fleur
-  H58: Aromatique
-  H59: Bois
-  H60: bourgeons
-  H61: Cuve
-  H62: feuilles et fruits
-  H63: Fruit
-  H64: racines fraîches
-  H65: racines séchées
-  H66: Table
-  H69: Mélange
-  H70: enherbement non fourrager
-  H71: Oléifère
-  H72: Autre
-  I01: Arbousier commun
-  I02: Arbre à pain
-  I03: Aulne
-  I04: Bouleau
-  I06: Canne de provence ou roseaux à quenouilles
-  I07: Capucine tubéreuse
-  I08: Carambolier
-  I10: Cèdre
-  I11: Cerfeuil tubéreux
-  I12: Charme
-  I14: Chêne
-  I15: Chervis
-  I16: Cormier
-  I17: Douglas
-  I19: Erable
-  I20: Eucalyptus
-  I21: Flouve médicinale
-  I22: Frêne
-  I23: Gerbera
-  I24: Gesse Commune ou pois carré
-  I25: Gingembre
-  I26: Gombo
-  I27: Grenadier
-  I28: Guède ou pastel des teinturiers
-  I29: Hêtre
-  I30: King-grass
-  I31: Longanie
-  I32: Malanga ou chou caraïbe
-  I33: Manioc
-  I34: Mélèze
-  I35: Merisier
-  I36: Nyger
-  I37: Papayer
-  I38: Peuplier
-  I39: Pin
-  I40: Pitaya
-  I41: Pomme Liane ou Grenadille
-  I42: Ramboutan
-  I43: Robinier
-  I44: Sapin
-  I45: Sapotillier
-  I46: Saule
-  I47: Sequoia
-  I48: Yacón ou Poire de terre
-  I49: Buis
-  I50: Marronnier
-  I51: Laurier cerise
-  I52: Platane commun
-  I53: Palmier éventail de Californie
-  I54: Palmier bleu
-  I55: Palmier nain
-  I56: Palmier dattier
-  I57: Palmier de Chine
-  I58: Thuya
-  I59: Faux-Cyprès
-  I60: Cyprès commun
-  I61: Genévrier
-  I62: Epicéa
-  I63: Arbre de Judée
-  I64: Camélia
-  I65: Catalpa
-  I66: Chalef argenté
-  I67: Fuchsia
-  I68: Fusain
-  I69: Hibuscus althéa
-  I70: Laurier-rose
-  I71: Mahonia
-  I72: Mimosa
-  I73: "Pyracantha (buisson ardent)"
-  I74: Rhododendron
-  I75: Viorne
-  I76: Amandier de Chine
-  I77: Amandier nain de Chine
-  I78: Cerisier du Japon
-  I79: Cerisier à fleurs à port colonnaire
-  I80: Cerisier de Mandchourie
-  I81: Cerisier hybride à fleurs
-  I82: Cerisier à fleurs doubles
-  I83: Cerisier du Tibet
-  I84: Merisier à grappes blanches
-  I85: Merisier à grappes roses
-  I86: Prunier à fleurs
-  I87: Prunier d'ornement à feuillage pourpre
-  I88: Anthurium
-  I89: Amaryllis belladona
-  I90: Campanule
-  I91: Célosie
-  I92: Delphinium
-  I93: Giroflée ravenelle
-  I94: Hortensia
-  I95: Hibiscus sabdariffa
-  I96: Lisianthus
-  I97: Muflier
-  I98: Pivoine
-  I99: Rosier multiflore
-  J03: Tulipe
-  J04: Cultures tropicales
-  J05: Divers
-  J06: CIPAN potentiel
-  J07: Cultures fourragères/Prairie/ Pelouse/ Gazon
-  J08: Sylviculture
-  J10: Grandes cultures
-  J11: PPAM
-  J12: Cultures dédiées à la production de biomasse
-  J13: Cornus
-  J14: Cotoneaster
-  J15: Euonymus
-  J17: Ilex
-  J18: Lagerstroemia
-  J19: Ligustrum
-  J20: Magnolia
-  J21: Osmanthus
-  J22: Photinia
-  J23: Pittosporum
-  J24: Santoline
-  J25: Spiraea
-  J26: Cupressocyparis
-  J27: Begonia
-  J28: Bidens
-  J29: Calibrachoa
-  J30: Coleus
-  J31: Coreopsis
-  J32: Cyclamen
-  J33: Diascia
-  J34: Dipladénia
-  J35: Gazania
-  J37: Impatiens
-  J38: Lantana
-  J40: Osteospermum
-  J41: Pelargonium
-  J42: Pelargonium grandiflorum
-  J43: Pelargonium hortorum
-  J44: Pelargonium peltatum
-  J45: Petunia
-  J46: Poinsettia
-  J47: Rudbeckia
-  J48: Viola
-  J49: Pâquerette
-  J50: Impatiens walleriana
-  J51: Impatiens Nouvelle Guinée
-  J52: Mélange Gazon
-  J53: Heuchère
-  J54: Tulipier de Virginie
-  J55: Magnolia grandiflora
-  J56: Magnolia soulangeana
-  J57: Quinoa
 
 # Combinaisons espèce + usage final (crop_specie_edicode + crop_final_usage_edicode)
 crop_combined:
