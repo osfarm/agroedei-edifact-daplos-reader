@@ -2,6 +2,11 @@
 
 Un package NPM qui lit des fichiers Daplos (.dap) et les convertit en JSON.
 
+## Transformations
+- Coordonnées GPS converties en Wgs84
+- Dates converties en JSON
+- Tous les codes reconnus sont complétés avec les libellés en français correspondants
+
 ## Resources and specifications
 - Daplos: https://agroedieurope.fr/wp-content/uploads/daplos2024-fp-v09-5.pdf
 - eDaplos: https://unece.org/fileadmin/DAM/cefact/brs/BRS_CropDataSheetProcess__eDAPLOS__v0.7.0.pdf
