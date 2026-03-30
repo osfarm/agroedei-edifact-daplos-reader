@@ -1,0 +1,25 @@
+{
+  "name": "agroedei-edifact-daplos-reader",
+  "version": "1.0.0",
+  "description": "Parser pour fichiers Daplos (.dap) - Conversion vers JSON",
+  "main": "parse.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test-convert.js",
+    "build:codes": "node build-aee-codes.js",
+    "prebuild": "npm run build:codes"
+  },
+  "keywords": [
+    "daplos",
+    "dap",
+    "parser",
+    "agriculture",
+    "edifact"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.1",
+    "uuid": "^9.0.0"
+  }
+}
