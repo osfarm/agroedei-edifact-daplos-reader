@@ -5,8 +5,8 @@
   "main": "parse.js",
   "type": "module",
   "scripts": {
-    "test": "node test-convert.js",
-    "build:codes": "node build-aee-codes.js",
+    "test": "node test/test-convert.js",
+    "build:codes": "node scripts/build-aee-codes.js",
     "prebuild": "npm run build:codes"
   },
 

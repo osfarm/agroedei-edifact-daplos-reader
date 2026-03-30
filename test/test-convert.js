@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { parseDapDocument, simplifyDapDocumentForExport } from './parse.js';
+import { parseDapDocument, simplifyDapDocumentForExport } from '../parse.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -29,7 +29,7 @@ if (!inputFile || !outputFile) {
   console.error('Usage: node test-convert.js -i <input-file> -o <output-file>');
   console.error('');
   console.error('Example:');
-  console.error('  node test-convert.js -i "test/testdata/Gaec du Lunerotte.dap" -o out/result.json');
+  console.error('  node test/test-convert.js -i "test/testdata/Gaec du Lunerotte.dap" -o out/result.json');
   process.exit(1);
 }
 
