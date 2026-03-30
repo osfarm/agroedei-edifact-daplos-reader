@@ -1,6 +1,6 @@
 {
   "name": "@osfarm/agroedei-edifact-daplos-reader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parser pour fichiers Daplos (.dap) - Conversion vers JSON",
   "main": "parse.js",
   "type": "module",
@@ -9,7 +9,6 @@
     "build:codes": "node scripts/build-aee-codes.js",
     "prebuild": "npm run build:codes"
   },
-
   "author": "Bertrand GORGE",
   "repository": {
     "type": "git",
@@ -21,9 +20,10 @@
   "homepage": "https://github.com/osfarm/agroedei-edifact-daplos-reader#readme",
   "dependencies": {
     "js-yaml": "^4.1.1",
+    "proj4": "^2.20.4",
     "uuid": "^9.0.0"
   },
-  "license": "MIT",  
+  "license": "MIT",
   "keywords": [
     "daplos",
     "dap",

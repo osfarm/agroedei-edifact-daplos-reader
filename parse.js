@@ -1,7 +1,47 @@
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
+import proj4 from 'proj4';
 import { AEE_CODES } from './dict/aee_codes.js';
+
+// Définitions des systèmes de projection
+// Lambert 2 étendu (EPSG:27572)
+proj4.defs('EPSG:27572', '+proj=lcc +lat_1=46.8 +lat_0=46.8 +lon_0=0 +k_0=0.99987742 +x_0=600000 +y_0=2200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m +no_defs');
+
+// Lambert 93 (EPSG:2154)
+proj4.defs('EPSG:2154', '+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');
+
+// WGS84 (EPSG:4326) - déjà défini dans proj4 par défaut
+
+/**
+ * Convert coordinates to WGS84 based on SRS code
+ * @param {string} srsCode - SRS code from DAPLOS spec (3=Lambert2, 4=WGS84, 5=Lambert93)
+ * @param {number} x - X coordinate (longitude in source system)
+ * @param {number} y - Y coordinate (latitude in source system)
+ * @returns {Array<number>} - [longitude, latitude] in WGS84
+ */
+function convertToWgs84(srsCode, x, y) {
+  // Code 4: Déjà en WGS84, pas de conversion
+  if (srsCode === '4') {
+    return [x, y];
+  }
+
+  let sourceProj;
+  if (srsCode === '3') {
+    // Lambert 2 étendu
+    sourceProj = 'EPSG:27572';
+  } else if (srsCode === '5') {
+    // Lambert 93
+    sourceProj = 'EPSG:2154';
+  } else {
+    // SRS inconnu, retourner les coordonnées telles quelles
+    return [x, y];
+  }
+
+  // Conversion vers WGS84 (EPSG:4326)
+  const [lon, lat] = proj4(sourceProj, 'EPSG:4326', [x, y]);
+  return [lon, lat];
+}
 
 // Build a lookup map: agroedi_code → agroedi_name_fr from the CSV reference file
 const CROP_NAME_BY_CODE = {};
@@ -172,8 +212,8 @@ const LINE_DEFS = {
       { name: 'harvest_year', len: 4 },
       { name: 'cadastral_land_parcel_number', len: 16 },
       { name: 'srs', len: 3 },
-      { name: 'longitude', len: 11 },
-      { name: 'latitude', len: 10 },
+      { name: 'longitude', len: 11 },  // Position 34-44: Longitude (E en Lambert 93)
+      { name: 'latitude', len: 10 },   // Position 45-54: Latitude (N en Lambert 93)
       { name: 'elevation', len: 18 },
     ],
   },
@@ -199,8 +239,8 @@ const LINE_DEFS = {
       { name: 'land_parcel_work_number', len: 4 },
       { name: 'harvest_year', len: 4 },
       { name: 'srs', len: 3 },
-      { name: 'latitude', len: 11 },
-      { name: 'longitude', len: 10 },
+      { name: 'longitude', len: 11 },  // Position 18-28: Longitude (E en Lambert 93)
+      { name: 'latitude', len: 10 },   // Position 29-38: Latitude (N en Lambert 93)
       { name: 'elevation', len: 18 },
     ],
   },
@@ -716,14 +756,24 @@ function pluralize(word) {
  * - Special handling: all spatial coordinates → [longitude, latitude] array
  */
 function simplifyDapLineForExport(line) {
-  // Special case: all spatial coordinates → simplified [longitude, latitude] array
+  // Special case: all spatial coordinates → simplified [longitude, latitude] array in WGS84
   if (line.name === 'crop_spatial_coordinate' || 
       line.name === 'cadastral_spatial_coordinate' || 
       line.name === 'intervention_spatial_coordinate') {
+    
+    const longitude = parseFloat(line.fields.longitude || 0);
+    const latitude = parseFloat(line.fields.latitude || 0);
+    const srsCode = line.fields.srs;
+
+    // Convert to WGS84 based on SRS code
+    // 3 = Lambert 2 étendu, 4 = WGS84, 5 = Lambert 93
+    const [lon, lat] = convertToWgs84(srsCode, longitude, latitude);
+    
     // Round to 8 decimal places to avoid floating-point precision errors
-    const longitude = Math.round(parseFloat(line.fields.longitude || 0) / 1000000 * 100000000) / 100000000;
-    const latitude = Math.round(parseFloat(line.fields.latitude || 0) / 10000 * 100000000) / 100000000;
-    return [longitude, latitude];
+    const lonRounded = Math.round(lon * 100000000) / 100000000;
+    const latRounded = Math.round(lat * 100000000) / 100000000;
+    
+    return [lonRounded, latRounded];
   }
 
   const result = {};
