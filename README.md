@@ -2,7 +2,9 @@
 
 Un package NPM qui lit des fichiers Daplos (.dap) et les convertit en JSON.
 
-Spécification : https://agroedieurope.fr/wp-content/uploads/daplos2024-fp-v09-5.pdf
+## Resources and specifications
+- Daplos: https://agroedieurope.fr/wp-content/uploads/daplos2024-fp-v09-5.pdf
+- eDaplos: https://unece.org/fileadmin/DAM/cefact/brs/BRS_CropDataSheetProcess__eDAPLOS__v0.7.0.pdf
 
 ## Installation
 
