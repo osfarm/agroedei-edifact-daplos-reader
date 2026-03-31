@@ -1,9 +1,19 @@
 {
   "name": "@osfarm/agroedei-edifact-daplos-reader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parser pour fichiers Daplos (.dap) - Conversion vers JSON",
   "main": "parse.js",
+  "types": "index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./parse.js"
+    },
+    "./dict/aee_codes": {
+      "import": "./dict/aee_codes.js"
+    }
+  },
   "scripts": {
     "test": "node test/test-convert.js",
     "build:codes": "node scripts/build-aee-codes.js",
@@ -29,6 +39,7 @@
     "dap",
     "parser",
     "agriculture",
-    "edifact"
+    "edifact",
+    "typescript"
   ]
 }

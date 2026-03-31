@@ -52,6 +52,45 @@ const jsonData = simplifyDapDocumentForExport(doc);
 console.log(jsonData);
 ```
 
+### Utilisation avec TypeScript
+
+Le module inclut des définitions de types TypeScript pour une utilisation type-safe :
+
+```typescript
+import { parseDaplosFile, AEE_CODES } from '@osfarm/agroedei-edifact-daplos-reader';
+import type { SimplifiedDapDocument, Crop, Intervention } from '@osfarm/agroedei-edifact-daplos-reader';
+import fs from 'fs';
+
+// Parser un fichier DAP
+const buffer = fs.readFileSync('fichier.dap');
+const data: SimplifiedDapDocument = parseDaplosFile(buffer);
+
+// Accès type-safe aux cultures
+data.crops.forEach((crop: Crop) => {
+  console.log(`Culture: ${crop.crop_name_fr}`);
+  console.log(`Surface: ${crop.area_ha} ha`);
+  
+  // Accès aux interventions
+  crop.interventions?.forEach((intervention: Intervention) => {
+    console.log(`  ${intervention.date}: ${intervention.nature_label}`);
+  });
+});
+
+// Accès aux codes AEE
+const inputNatures = AEE_CODES.input_nature;
+console.log(inputNatures['ZIU']); // "Herbicide"
+```
+
+Types disponibles :
+- `SimplifiedDapDocument` : Structure complète du document parsé
+- `Crop` : Informations sur une culture/parcelle
+- `Intervention` : Opération agricole effectuée
+- `Input` : Intrant utilisé dans une intervention
+- `FieldPoint` : Point GPS d'une parcelle
+- `Coordinate` : Coordonnées [longitude, latitude] en WGS84
+
+
+
 ## Format des fichiers DAP
 
 Les fichiers DAP (Daplos) sont des fichiers texte à largeur fixe avec encodage Windows-1252 et fins de ligne CRLF.   
