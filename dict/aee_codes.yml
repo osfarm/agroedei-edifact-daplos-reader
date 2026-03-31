@@ -714,7 +714,7 @@ crop_species:
   J37: Impatiens
   J38: Lantana
   J40: Osteospermum
-  J41: Pelargonium
+  J41: Pélargonium
   J42: Pelargonium grandiflorum
   J43: Pelargonium hortorum
   J44: Pelargonium peltatum
@@ -731,6 +731,12 @@ crop_species:
   J55: Magnolia grandiflora
   J56: Magnolia soulangeana
   J57: Quinoa
+  T36: Repousses céréales (CIPAN)
+  T37: Repousses colza (CIPAN)
+  T88: Repousses pois (CIPAN)
+  T90: Autre graminée (CIPAN)
+  T91: Autre crucifère (CIPAN)
+  T92: Autre légumineuse (CIPAN)
   ZA2: Betterave sucrière
   ZAF: Agrostide
   ZAG: Ail
@@ -787,6 +793,7 @@ crop_species:
   ZCF: Jachère en graminées
   ZCG: Jachère en légumineuses et en graminées
   ZCH: Jachère en légumineuses
+  ZCI: Jachère non semée
   ZCJ: Laitue
   ZCK: Lentilles
   ZCL: Lin
@@ -797,6 +804,7 @@ crop_species:
   ZCQ: Luzerne
   ZCR: Mâche
   ZCS: Maïs
+  ZCT: Mélange graminées
   ZCU: Mélange graminées protéagineux
   ZCV: Mélilot
   ZCW: Melon
