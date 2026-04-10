@@ -549,13 +549,19 @@ function parseDapDate8(value) {
  * Returns null if empty or invalid.
  */
 function parseDapDate12(value) {
-  if (!value || value.length < 12) return null;
+  if (!value || value.length < 8) return null;
   const year = parseInt(value.substring(0, 4), 10);
   const month = parseInt(value.substring(4, 6), 10);
   const day = parseInt(value.substring(6, 8), 10);
-  const hour = parseInt(value.substring(8, 10), 10);
-  const min = parseInt(value.substring(10, 12), 10);
+
+  let hour, min;
+  if (value.length == 12) {
+    hour = parseInt(value.substring(8, 10), 10);
+    min = parseInt(value.substring(10, 12), 10);
+  }
+
   if (isNaN(year) || isNaN(month) || isNaN(day)) return null;
+  
   return new Date(Date.UTC(year, month - 1, day, hour || 0, min || 0));
 }
 
