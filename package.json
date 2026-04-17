@@ -1,6 +1,6 @@
 {
   "name": "@osfarm/agroedei-edifact-daplos-reader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Parser pour fichiers Daplos (.dap) - Conversion vers JSON",
   "main": "parse.js",
   "types": "index.d.ts",

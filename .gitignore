@@ -2,3 +2,4 @@ node_modules/
 out/
 *.log
 .DS_Store
+test/testdata/43258225200016_20250218122141.dap
