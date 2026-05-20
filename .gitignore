@@ -3,3 +3,4 @@ out/
 *.log
 .DS_Store
 test/testdata/43258225200016_20250218122141.dap
+test/testdata/Export_1778663769.dap
