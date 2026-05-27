@@ -156,6 +156,15 @@ lines:
       - contract_description: string-35
       - other_contract_description: string-35
       - contract_started_on: string-8 #SSAAMMJJ
+      - contractor_identification: string-14
+      - type_of_identification: string-3
+      - company_name_1: string-35
+      - company_name_2: string-35
+      - street_address_1: string-35
+      - street_address_2: string-35
+      - city: string-35
+      - postal_code: string-9
+      - country: string-2
 
   crop_history:
     key: "PH"
@@ -245,8 +254,10 @@ lines:
       - temperature_signe: string-1
       - external_temperature: string-3
       - hygrometrie_percentage: string-3
-      - total_volume: string-9
-      - per_area_unit_edicode: string-3 #ZKK
+      - target_quantity: string-9
+      - target_quantity_unit_edicode: string-3
+      - effective_quantity: string-9
+      - working_quantity_unit_edicode: string-3
       - working_area_in_hectare: string-9
       - first_comment: string-70
       - second_comment: string-70
@@ -349,6 +360,22 @@ lines:
 
   residue_analysis:
     key: "IA"
+    cells:    
+      - plot_number: string-4
+      - crop_reference: string-4
+      - expected_harvest_year: string-4
+      - event_reference: string-32
+      - analysis_slip_number: string-35
+      - analysis_laboratory_identification: string-9
+      - company_name_1: string-35
+      - company_name_2: string-35
+      - street_address_1: string-35
+      - street_address_2: string-35
+      - city: string-35
+      - postal_code: string-9
+      - country: string-2
+      - analysis_date: string-8 #SSAAMMJJ
+      - sampling_date: string-8 #SSAAMMJJ 
 
   output:
     key: "VR"
@@ -395,3 +422,24 @@ lines:
 
   decision_indicator:
     key: "VH"
+    cells:
+      - parcel_sequence_number: string-4
+      - cultivated_parcel_reference: string-4
+      - expected_harvest_year: string-4
+      - event_reference: string-32
+      - link_type: string-3
+      - reference_of_the_event_in_question: string-32
+      - previous_parcel_number: string-4
+      - harvest_year: string-4
+      - farm_identification: string-17
+      - identification_type: string-3
+      - company_name_1: string-35
+      - company_name_2: string-35
+      - street_address_1: string-35
+      - street_address_2: string-35
+      - city: string-35
+      - postal_code: string-9
+      - country: string-2
+      - non_edi_parcel_information_1: string-70
+      - non_edi_parcel_information_2: string-70      
+

@@ -714,7 +714,7 @@ crop_species:
   J37: Impatiens
   J38: Lantana
   J40: Osteospermum
-  J41: Pélargonium
+  J41: Pelargonium
   J42: Pelargonium grandiflorum
   J43: Pelargonium hortorum
   J44: Pelargonium peltatum
@@ -750,7 +750,11 @@ crop_species:
   ZAO: Betterave rouge
   ZAP: Brocoli
   ZAQ: Blé dur
+  ZAQZFA: blé dur de printemps
+  ZAQZFB: blé dur d'hiver
   ZAR: Blé tendre
+  ZARZFA: blé tendre de printemps
+  ZARZFB: blé tendre d'hiver  
   ZAS: Céléri
   ZAT: Brome
   ZAU: Cardon
@@ -764,6 +768,7 @@ crop_species:
   ZBC: Choux fourrager
   ZBD: Choux-fleur
   ZBE: Colza
+  ZBEZESZFB: Colza oléagineux d'hiver
   ZBF: Concombre
   ZBG: Coquelicot
   ZBH: Cornichon
@@ -797,6 +802,7 @@ crop_species:
   ZCJ: Laitue
   ZCK: Lentilles
   ZCL: Lin
+  ZCLZER: Lin fibre de printemps
   ZCM: Lotier cornicule
   ZCN: Lupin blanc
   ZCO: Lupin jaune
@@ -830,6 +836,7 @@ crop_species:
   ZDQ: Pois chiche
   ZDR: Poivron
   ZDS: Pomme de terre
+  ZDSZLR: Pomme de terre Conso chair ferme
   ZDT: Potiron
   ZDU: Prairie
   ZDV: Radis
