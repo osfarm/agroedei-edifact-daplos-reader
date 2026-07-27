@@ -756,8 +756,26 @@ function enrichWithAeeLabels(fields) {
       // Handle fields like input_organic_code, input_mineral_code, etc.
       shouldEnrich = true;
       labelField = fieldName.replace('_code', '_label');
+    } else if (fieldName == 'other_soil_nature') {
+      shouldEnrich = true;
+      labelField = fieldName.replace('other_soil_nature', 'other_soil_nature_label');
+    } else if (fieldName == 'residue_input') {
+      shouldEnrich = true;
+      labelField = fieldName.replace('residue_input', 'residue_input_label');
+    } else if (fieldName == 'residue_management') {
+      shouldEnrich = true;
+      labelField = fieldName.replace('residue_management', 'residue_management_label');
+    } else if (fieldName == 'crop_specie_number') {
+      shouldEnrich = true;
+      labelField = fieldName.replace('crop_specie_number', 'crop_specie_label');
     }
-    
+
+    // Not sure about that one: it always says ZHK which is nonsense.
+    // } else if (fieldName.endsWith('_unity')) {
+    //   // Handle fields like input_organic_code, input_mineral_code, etc.
+    //   shouldEnrich = true;
+    //   labelField = fieldName.replace('_unity', '_unitname');
+
     // If we should enrich, search for the code across all AEE categories
     if (shouldEnrich) {
       // Search across all categories for this code
